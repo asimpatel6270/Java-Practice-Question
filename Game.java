@@ -24,11 +24,7 @@ public class Game {
                     else if (flag == -1) {
                         System.out.println("exiting the game .................");
                         break;
-                    }
-                    else {
-                        System.out.println("invalid input");
-                    }
-                    
+                    }    
                 }
                 if(guess<rannum){
                     System.out.println("You entered smaller number , ... pls enter greater one ");
@@ -50,16 +46,7 @@ public class Game {
                         System.out.println("exiting the game .................");
                         break;
                     }
-                    else {
-                        System.out.println("invalid input");
-                    }
-
-
-            }
-
-            
-
-            
+            }  
         }
 
     }
