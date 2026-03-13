@@ -2,15 +2,18 @@ import java.util.Scanner;
 public class Game {
     public static void main(String[] args) {
         System.out.println("Welcome!!");
-        int rannum;
+        int rannum=0;
         int guess;
         Scanner sc = new Scanner(System.in);
-        rannum = (int) (Math.random()*(100));
+        
         int chances = 1;
         int flag;
-        
         while (true) {
-            System.out.println("Guess any number between 1 to 99 \n you have 5 chances");
+            if (chances==1) {
+                rannum = (int)(Math.random()*(100));   
+            }
+            System.out.println("Guess any number between 1 to 99 ");
+            System.out.println(rannum);
             guess = sc.nextInt();
             if(chances <5){
                 if(guess == rannum){
@@ -20,6 +23,7 @@ public class Game {
                     if (flag == 1) {
                         System.out.println("Welcome again !!!");
                         chances = 1;
+                        rannum = (int)(Math.random()*(100));
                     }
                     else if (flag == -1) {
                         System.out.println("exiting the game .................");
