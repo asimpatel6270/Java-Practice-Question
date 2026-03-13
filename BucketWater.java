@@ -77,7 +77,7 @@ public class BucketWater {
                     System.out.println("now bucket contains "+bucket+" liters of water");
                     break;
                 case '*':
-                    bucket *= rannum;
+                    bucket = bucket*2 ;
                     System.out.println("now bucket contains "+bucket+" liters of water");
                 default:
                     System.out.println("invalid operator!!");
