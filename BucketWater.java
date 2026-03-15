@@ -62,7 +62,7 @@ public class BucketWater {
         Scanner sc = new Scanner(System.in);
         System.out.println("initially your bucket contains "+bucket+" liters of water!!");
         while (true) {
-            int rannum = ((int) (Math.random()*(8)))+1;
+            int rannum = ((int) (Math.random()*(21)))+1;
             System.out.println("You got the number :"+rannum);
             System.out.println("enter your choice : + , - , *");
             char choice = sc.next().charAt(0);
@@ -94,17 +94,13 @@ public class BucketWater {
                 break;
             }
             if(bucket==21){
-                System.out.println("You win!!!!");
+                System.out.println("You win‼️!!!!");
                 break;
             }
             turn++;
             
-        }
-        
-        
             
-    
-        
+        } 
         
     }
     

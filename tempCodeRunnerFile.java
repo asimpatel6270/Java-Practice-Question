@@ -1,2 +1,4 @@
-        System.out.print("enter withdrawal amount :");
-        double withdrawalAmount = sc.nextDouble();
+            // for (int j = 1; j <= i; j++) {
+            // System.out.print("* ");
+                
+            // }

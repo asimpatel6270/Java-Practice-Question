@@ -4,10 +4,12 @@ public class rockPaper {
         Scanner sc = new Scanner(System.in);
         String computerchoice="as";
         System.out.println("Welcome!!!");
-        int turn = 1;
-        while (turn<=3) {
+        // int turn = 1;
+        int choice;
+        do {
+            
             int computer = (int)(Math.random()*(3));
-            turn++;
+            
             // System.out.println(computer);
             if(computer==0) {
                 computerchoice = "stone";            
@@ -18,7 +20,7 @@ public class rockPaper {
             else if (computer==2) {
                 computerchoice = "scissor";
             }
-            System.out.println(computerchoice);
+            // System.out.println(computerchoice);
             System.out.println("enter your choice :  stone , paper , scissor");
             String input = sc.next();        
             
@@ -40,6 +42,10 @@ public class rockPaper {
             else if (computerchoice.equalsIgnoreCase("scissor")&&input.equalsIgnoreCase("scissor")) {
                 System.out.println("tie!!!!");
             }
+            else if (computerchoice.equalsIgnoreCase("scissor")&&input.equalsIgnoreCase("stone")) {
+                System.out.println("you win!!!!");
+            }
+
             else if (computerchoice.equalsIgnoreCase("paper")&&input.equalsIgnoreCase("stone")) {
                 System.out.println("you loss!!!!");
             }
@@ -49,9 +55,11 @@ public class rockPaper {
             else if (computerchoice.equalsIgnoreCase("paper")&&input.equalsIgnoreCase("paper")) {
                 System.out.println("tie!!!!");
             }
-            
-                
-            }
+            System.out.println("Computer Choice "+computerchoice);
+            System.out.println("If you want to play again enter 1 \n if you want to quit the game enter 2");
+            choice = sc.nextInt();
+
+        } while (choice==1);
     
         
         }
