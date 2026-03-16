@@ -92,12 +92,13 @@ public class pattern {
             
         }
     }
+    
     static void  ReverseEquilateralTriangle(){
         System.out.println("Reverse Equilateral Triangle :");
         int n = 4;
         
         for(int i = 1;i<=5;i++){
-            for(int k=1;k<=i;k++){
+            for(int k=1;k<i;k++){
                 System.out.print(" ");
                 
             }
@@ -111,7 +112,80 @@ public class pattern {
             
         }
     }
-   
+    static void Diamond(){
+        System.out.println("Diamond : ");
+        int n = 4;
+        
+        for(int i = 1;i<=5;i++){
+            for(int k=i;k<=n;k++){
+                System.out.print(" ");
+                
+            }
+            // n--;
+            
+            for(int j=1;j<=i*2-1;j++){
+                System.out.print("*");
+
+            }
+            System.out.println();
+            
+        }
+        n = 4;
+        
+        for(int i = 1;i<=5;i++){
+            for(int k=1;k<i;k++){
+                System.out.print(" ");
+                
+            }
+            // n--;
+            
+            for(int j=i*2-1;j<=9;j++){
+                System.out.print("*");
+
+            }
+            System.out.println();
+            
+        }
+
+
+    }
+    static void HollowTrianle(){
+        System.out.println("Hollow Triangle : ");
+        int n = 7;
+        for (int i = 1; i < 8; i++) {
+            for (int k = i; k < n; k++) {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i*2-1;j++){
+                if (i==1||i==7||j==1||j==11||(j==9&&i==5)||(j==7&&i==4)||(j==5&&i==3)||(j==3&&i==2)) {
+                    System.out.print("*");
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    static void ReverseHollowTriangle(){
+        System.out.println("Reverse Hollow Triangle : ");
+        int n = 7;
+        for (int i = 1; i < 8; i++) {
+            for (int k = 1; k <i; k++) {
+                System.out.print(" ");
+            }
+            for(int j=i*2-1;j<=11;j++){
+                if (i==1||i==7||j==1||j==11||(j==9&&i==5)||(j==7&&i==4)||(j==5&&i==3)||(j==3&&i==2)) {
+                    System.out.print("*");
+                }
+                else {
+                    System.out.print(" ");
+                }
+                // System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         Square();
         HollowSquare();
@@ -121,7 +195,10 @@ public class pattern {
         ReverseRightAngleTriangle();
         EquilateralTriangle();
         ReverseEquilateralTriangle();
-        // Diamond();
+        Diamond();
+        HollowTrianle();
+        ReverseHollowTriangle();
+
 
 
 
