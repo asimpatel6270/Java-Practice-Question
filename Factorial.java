@@ -20,8 +20,20 @@
 
 // 5! = 120
 import java.util.*;
+
 public class Factorial {
+    static void Factorial(int n){
+        int fac = 1;
+        for (int i = 1; i <=n; i++) {
+            fac = fac*i;
+        }
+        System.out.println(fac);
+    }
     static int facto(int n){
+        if (n<0) {
+            System.out.print("Factorialm not defined");
+            return 0;
+        }
         if (n==1) {
             return n;
         }
@@ -42,9 +54,10 @@ public class Factorial {
 
     }
     public static void main(String[] args) {
+        Factorial(5);
         // Factorial f = new Factorial();
-        System.out.println(facto(5));
-        System.out.println(factoWithAdd(5));
+        // System.out.println(facto(-5)); 
+        // System.out.println(factoWithAdd(5));
         
     }
     
